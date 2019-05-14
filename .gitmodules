@@ -1,0 +1,3 @@
+[submodule "src/cpp/lib/fc"]
+	path = src/cpp/lib/fc
+	url = git://github.com/EOSIO/fc.git
