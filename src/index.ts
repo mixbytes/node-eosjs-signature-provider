@@ -24,7 +24,6 @@ export default class NodeEosjsSignatureProvider implements SignatureProvider {
         return this.generateKeyPairs()
             .then(() => new Promise<PushTransactionArgs>(resolve => {
                 let privateKeys = requiredKeys
-                    .map(key => convertLegacyPublicKey(key))
                     .map(key => this.keys.get(key))
                     .filter(pkey => pkey);
 

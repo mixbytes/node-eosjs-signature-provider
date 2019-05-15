@@ -1,13 +1,11 @@
 {
   "name": "node-eosjs-signature-provider",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Nodejs signature provider for eosjs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "cmake-js build -g -d src/cpp -O build && tsc",
-    "tsc": "tsc",
-    "start": "node lib/test.js"
+    "build": "cmake-js build -g -d src/cpp -O build && tsc"
   },
   "repository": {
     "type": "git",
