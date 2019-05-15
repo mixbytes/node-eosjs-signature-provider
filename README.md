@@ -8,7 +8,7 @@ library to sign transactions via node cpp modules feature.
 ### How to use?
 First, you need to install library via npm or yarn
 ```bash
-npm install --save node-eos-signature-provider
+npm install --save node-eosjs-signature-provider
 ```
 
 Than, you can use it like here:
