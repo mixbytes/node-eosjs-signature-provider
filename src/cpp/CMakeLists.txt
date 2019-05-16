@@ -7,6 +7,14 @@ set(CMAKE_CXX_STANDARD 14)
 set(BOOST_SYSTEM_NO_DEPRECATED)
 SET(Boost_USE_STATIC_LIBS ON CACHE STRING "ON or OFF")
 
+if (UNIX AND NOT APPLE)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
+    set(rt_library rt)
+    find_library(GMP_LIBRARIES libgmp.so)
+    set(GMP_FOUND TRUE)
+endif ()
+
 include_directories(/usr/local/include/node)
 
 # add defaults for openssl
@@ -54,8 +62,8 @@ file(GLOB SOURCE_FILES "node_eos_signature_provider.cpp")
 # This line will tell CMake that we're building a shared library
 # from the above source files
 # named after the project's name
+
 add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
 set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "" SUFFIX ".node")
-target_link_libraries(${PROJECT_NAME} ${CMAKE_JS_LIB} ${Boost_LIBRARIES} fc)
+target_link_libraries(${PROJECT_NAME} ${CMAKE_JS_LIB} fc)
 
-message(WARN "${Boost_LIBRARIES}")
