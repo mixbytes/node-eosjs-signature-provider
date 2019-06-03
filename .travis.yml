@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - "12"
+os:
+  - linux
+  - osx
 
 stages:
   - install
@@ -10,9 +13,6 @@ stages:
 jobs:
   include:
     - stage: build
-      os:
-        - linux
-        - osx
       script:
         - npm run build
         - ls /
