@@ -1,42 +1,44 @@
 {
   "name": "node-eosjs-signature-provider",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Nodejs signature provider for eosjs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "os": [
+    "darwin",
+    "linux"
+  ],
   "scripts": {
-    "build": "cmake-js build -g -d src/cpp -O build && tsc"
+    "build": "cmake-js build -g -d src/cpp -O build && tsc",
+    "test": ""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mixbytes/node-eos-signature-provider.git"
+    "url": "git+https://github.com/mixbytes/node-eosjs-signature-provider.git"
   },
   "author": "",
-  "licenses": [
-    {
-      "type": "Apache-2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0"
-    }
-  ],
+  "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/mixbytes/node-eos-signature-provider/issues"
+    "url": "https://github.com/mixbytes/node-eosjs-signature-provider/issues"
   },
-  "homepage": "https://github.com/mixbytes/node-eos-signature-provider#readme",
+  "homepage": "https://github.com/mixbytes/node-eosjs-signature-provider#readme",
   "files": [
     "dist/**/*",
     "build/Release/**/*"
   ],
   "dependencies": {
+    "@types/node": "^12.0.4",
     "boost-lib": "^0.11.3",
+    "cmake-js": "^5.2.0",
     "eosjs": "^20.0.0",
     "eosjs-ecc": "^4.0.4"
   },
   "devDependencies": {
-    "@types/node": "^12.0.1",
-    "cmake-js": "^5.2.0",
     "node-addon-api": "^1.6.3",
     "source-map-support": "^0.5.12",
-    "typescript": "^3.4.5"
+    "text-encoding": "^0.7.0",
+    "typescript": "^3.5.1",
+    "@types/text-encoding": "0.0.35"
   },
   "cmake-js": {
     "runtime": "node"

@@ -1,7 +1,6 @@
 // @ts-ignore
 import * as ecc from "eosjs-ecc"
 // @ts-ignore
-import * as cppModule from "../build/Release/node_eos_signature_provider";
 import {SignatureProvider, SignatureProviderArgs} from "eosjs/dist/eosjs-api-interfaces";
 import {PushTransactionArgs} from "eosjs/dist/eosjs-rpc-interfaces";
 import {convertLegacyPublicKey} from 'eosjs/dist/eosjs-numeric';
@@ -9,11 +8,22 @@ import {convertLegacyPublicKey} from 'eosjs/dist/eosjs-numeric';
 export default class NodeEosjsSignatureProvider implements SignatureProvider {
     private readonly privateKeys: string[];
     private readonly keys: Map<string, string> = new Map();
+    private readonly module: any;
 
     constructor(privateKeys: string[]) {
         if (privateKeys.length === 0)
             throw new Error("At least one private key must be specified");
         this.privateKeys = privateKeys;
+        switch (process.platform) {
+            case "linux":
+                this.module = require("../../build/Release/linux.node");
+                break;
+            case "darwin":
+                this.module = require("../../build/Release/darwin.node");
+                break;
+            default:
+                throw new Error(`This module only works on Darwin (MacOS) and Linux. Your os is ${process.platform}`);
+        }
     }
 
     getAvailableKeys(): Promise<string[]> {
@@ -36,7 +46,7 @@ export default class NodeEosjsSignatureProvider implements SignatureProvider {
                 resolve(
                     {
                         serializedTransaction: serializedTransaction,
-                        signatures: cppModule.sign(privateKeys, signBuf)
+                        signatures: this.module.sign(privateKeys, signBuf)
                     }
                 );
             }));
