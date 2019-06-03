@@ -6,12 +6,14 @@ os:
   - linux
   - osx
 
-install:
-  - npm install
-  - npm run build
-  - ls
+stages:
+  - install
+  - build
+  - test
 
 jobs:
   include:
-    - stage: second
-      script: ls
+    - stage: build
+      script:
+        - npm run build
+        - ls /
