@@ -10,6 +10,8 @@ os:
   - linux
   - osx
 
+dist: xenial
+
 install:
   - npm install
   - npm run build
