@@ -12,6 +12,9 @@ os:
 
 dist: xenial
 
+before_install:
+  - sudo apt-get install -y libxml3-dev
+
 install:
   - npm install
   - npm run build
