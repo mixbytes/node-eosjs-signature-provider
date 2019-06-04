@@ -3,9 +3,8 @@ cmake_minimum_required(VERSION 3.5)
 project(node_eos_signature_provider)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS "ON")
-set(CXX_STANDARD 14)
+set(CXX_STANDARD 11)
 set(CXX_STANDARD_REQUIRED YES)
-set(CXX_EXTENSIONS NO)
 set(BOOST_SYSTEM_NO_DEPRECATED)
 SET(Boost_USE_STATIC_LIBS ON CACHE STRING "ON or OFF")
 
