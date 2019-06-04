@@ -41,6 +41,7 @@
     "@types/text-encoding": "0.0.35"
   },
   "cmake-js": {
-    "runtime": "node"
+    "runtime": "node",
+    "arch": "x64"
   }
 }
