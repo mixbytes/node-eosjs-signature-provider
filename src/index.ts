@@ -56,8 +56,10 @@ export default class NodeEosjsSignatureProvider implements SignatureProvider {
         if (this.keys.size !== 0)
             return Promise.resolve();
         return Promise.all(this.privateKeys.map(privateKey => {
-            this.keys.set(
-                convertLegacyPublicKey(ecc.PrivateKey.fromString(privateKey).toPublic().toString()), privateKey);
+            let publicKey = ecc.PrivateKey.fromString(privateKey).toPublic().toString();
+
+            this.keys.set(publicKey, privateKey);
+            this.keys.set(convertLegacyPublicKey(publicKey), privateKey);
         }));
     }
 }

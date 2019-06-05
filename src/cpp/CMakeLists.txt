@@ -7,7 +7,6 @@ set( CMAKE_CXX_STANDARD 14 )
 set( CMAKE_CXX_EXTENSIONS ON )
 set( CXX_STANDARD_REQUIRED ON )
 set( CMAKE_POSITION_INDEPENDENT_CODE ON )
-string(APPEND CMAKE_CXX_FLAGS " -lgmp")
 
 set(BOOST_SYSTEM_NO_DEPRECATED)
 SET(Boost_USE_STATIC_LIBS ON CACHE STRING "ON or OFF")
@@ -46,6 +45,7 @@ include_directories(${Boost_INCLUDE_DIRS})
 # you should add this line in every CMake.js based project.
 include_directories(${CMAKE_JS_INC})
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/../../node_modules/node-addon-api")
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/../../node_modules/node-addon-api/src")
 
 list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/lib/fc/CMakeModules")
 include(GNUInstallDirs)

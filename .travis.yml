@@ -8,12 +8,9 @@ cache:
 
 os:
   - linux
-#  - osx
+  - osx
 
 dist: xenial
-
-before_install:
-  - sudo apt-get install -y libgmp-dev
 
 install:
   - npm install
