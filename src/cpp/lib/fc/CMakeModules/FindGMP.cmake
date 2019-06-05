@@ -31,7 +31,7 @@ else()
   	        DOC "The directory containing the GMP header files"
            )
 
-  find_library(GMP_LIBRARIES NAMES libgmp.a gmp.lib gmp libgmp-10 mpir
+  find_library(GMP_LIBRARIES NAMES libgmp.so gmp.lib gmp libgmp-10 mpir
     HINTS ENV GMP_LIB_DIR
           ENV GMP_DIR
     PATH_SUFFIXES lib
