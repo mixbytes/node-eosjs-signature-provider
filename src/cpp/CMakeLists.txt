@@ -2,8 +2,12 @@ cmake_minimum_required(VERSION 3.5)
 
 project(node_eos_signature_provider)
 
-set(CMAKE_EXPORT_COMPILE_COMMANDS "ON")
-set(CMAKE_CXX_STANDARD 14)
+set( CMAKE_EXPORT_COMPILE_COMMANDS "ON" )
+set( CMAKE_CXX_STANDARD 14 )
+set( CMAKE_CXX_EXTENSIONS ON )
+set( CXX_STANDARD_REQUIRED ON )
+set( CMAKE_POSITION_INDEPENDENT_CODE ON )
+
 set(BOOST_SYSTEM_NO_DEPRECATED)
 SET(Boost_USE_STATIC_LIBS ON CACHE STRING "ON or OFF")
 
@@ -34,7 +38,7 @@ if ("${OPENSSL_ROOT_DIR}" STREQUAL "")
 endif ()
 
 # Include BoostLib module
-file(GLOB_RECURSE boostlib_cmake_path "${CMAKE_CURRENT_SOURCE_DIR}/../../node_modules" "../../BoostLib.cmake")
+file(GLOB_RECURSE boostlib_cmake_path "${CMAKE_CURRENT_SOURCE_DIR}/../../../node_modules" "../../../BoostLib.cmake")
 list(GET boostlib_cmake_path 0 boostlib_cmake_path)
 get_filename_component(boostlib_cmake_path "${boostlib_cmake_path}" DIRECTORY)
 list(APPEND CMAKE_MODULE_PATH "${boostlib_cmake_path}")
@@ -48,7 +52,8 @@ include_directories(${Boost_INCLUDE_DIRS})
 # Essential include files to build a node addon,
 # you should add this line in every CMake.js based project.
 include_directories(${CMAKE_JS_INC})
-include_directories("${CMAKE_CURRENT_SOURCE_DIR}/../../node_modules/node-addon-api")
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/../../../node_modules/node-addon-api")
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/../../../node_modules/node-addon-api/src")
 
 list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/lib/fc/CMakeModules")
 include(GNUInstallDirs)
@@ -65,5 +70,4 @@ file(GLOB SOURCE_FILES "node_eos_signature_provider.cpp")
 
 add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
 set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "" SUFFIX ".node")
-target_link_libraries(${PROJECT_NAME} ${CMAKE_JS_LIB} fc)
-
+target_link_libraries(${PROJECT_NAME} ${CMAKE_JS_LIB} ${Boost_LIBRARIES} fc)
