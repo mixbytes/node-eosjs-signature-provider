@@ -22,8 +22,7 @@
   },
   "homepage": "https://github.com/mixbytes/node-eosjs-signature-provider#readme",
   "files": [
-    "dist/**/*",
-    "build/Release/**/*"
+    "dist/**/*"
   ],
   "dependencies": {
     "@types/node": "^12.0.4",
