@@ -10,14 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68a0cc0a-012d-4002-868c-1f266697fd4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platforms/linux/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platforms/linux/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platforms/osx/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platforms/osx/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,10 +26,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cpp/lib/fc/CMakeModules/FindGMP.cmake">
+        <entry file="file://$PROJECT_DIR$/src/cpp/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+            <state relative-caret-position="120">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -49,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+            <state relative-caret-position="375">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -76,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+            <state relative-caret-position="195">
+              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -171,8 +165,8 @@
         <option value="$PROJECT_DIR$/platforms/osx/package.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/index.ts" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -191,6 +185,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -230,7 +225,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -346,7 +340,8 @@
       <workItem from="1559753091164" duration="1681000" />
       <workItem from="1560157241626" duration="1272000" />
       <workItem from="1560182609455" duration="582000" />
-      <workItem from="1560185966980" duration="1248000" />
+      <workItem from="1560185966980" duration="1451000" />
+      <workItem from="1560200741888" duration="92000" />
     </task>
     <task id="LOCAL-00001" summary="Version 1.0.1, export updated">
       <created>1557921458855</created>
@@ -551,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559754425224</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Added folders for platform npm projects">
+      <created>1560192003027</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1560192003027</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -563,13 +565,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51944000" />
+    <option name="totallyTimeSpent" value="52239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28911835" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2152502" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -580,8 +582,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.21996303" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.39041096" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.1589041" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.39041096" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
@@ -637,7 +639,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First travis try" />
     <MESSAGE value="Another travis try" />
     <MESSAGE value="Another travis try 2" />
     <MESSAGE value="Another travis try 3" />
@@ -662,7 +663,8 @@
     <MESSAGE value="FC moved to cpp14 version" />
     <MESSAGE value="Updated path in CMakeLists" />
     <MESSAGE value="Added platform-specific dependencies; updated version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added platform-specific dependencies; updated version" />
+    <MESSAGE value="Added folders for platform npm projects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added folders for platform npm projects" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.d.ts">
@@ -844,17 +846,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cpp/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cpp/lib/fc/CMakeModules/FindGMP.cmake">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cpp/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -865,19 +867,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cpp/node_eos_signature_provider.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="https://schemastore.azurewebsites.net/schemas/json/travis.json">
-      <provider selected="true" editor-type-id="httpFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/linux/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/linux/package.json">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="375">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -887,6 +880,19 @@
           <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/linux/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/linux/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="https://schemastore.azurewebsites.net/schemas/json/travis.json">
+      <provider selected="true" editor-type-id="httpFileEditor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -898,17 +904,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/cpp/node_eos_signature_provider.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+        <state relative-caret-position="195">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
         </state>
       </provider>
     </entry>
