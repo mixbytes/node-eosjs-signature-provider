@@ -9,8 +9,8 @@ jobs:
         - linux
         - osx
       script:
-        - cd platforms/$TRAVIS_OS_NAME
         - npm i
+        - cd platforms/$TRAVIS_OS_NAME
         - npm run build
       deploy:
         provider: npm
