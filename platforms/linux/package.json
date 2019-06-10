@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Linux build for node-eosjs-signature-provider",
   "scripts": {
-    "build": "cmake-js build -g -d ../../src/src/cpp -O build"
+    "build": "cmake-js build -g -d ../../src/cpp -O build"
   },
   "repository": {
     "type": "git",
