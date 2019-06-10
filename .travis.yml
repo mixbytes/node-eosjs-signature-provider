@@ -4,18 +4,15 @@ os:
 dist: xenial
 language: node_js
 stages:
-  - buildModules
+  - test
   - buildDeploy
 jobs:
   include:
-    - stage: buildModules
+    - stage: test
       os:
         - linux
         - osx
-      before_script: skip
-      install: skip
       script:
-        - npm i
         - cd platforms/$TRAVIS_OS_NAME
         - npm i
         - npm run build
@@ -31,11 +28,7 @@ jobs:
     - stage: buildDeploy
       os:
         - linux
-      before_script: skip
-      install: skip
-      script:
-        - npm i
-        - npm run build
+      script: npm run build
       deploy:
         provider: npm
         email: govyazin@mixbytes.io
