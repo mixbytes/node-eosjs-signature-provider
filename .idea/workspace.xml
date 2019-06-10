@@ -82,11 +82,7 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -366,7 +362,7 @@
       <workItem from="1560157241626" duration="1272000" />
       <workItem from="1560182609455" duration="582000" />
       <workItem from="1560185966980" duration="1451000" />
-      <workItem from="1560200741888" duration="1259000" />
+      <workItem from="1560200741888" duration="1566000" />
     </task>
     <task id="LOCAL-00001" summary="Version 1.0.1, export updated">
       <created>1557921458855</created>
@@ -620,7 +616,21 @@
       <option name="project" value="LOCAL" />
       <updated>1560202446444</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Travis fix 2">
+      <created>1560203009467</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1560203009467</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Travis fix 3">
+      <created>1560203325876</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1560203325876</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -632,7 +642,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53406000" />
+    <option name="totallyTimeSpent" value="53713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -706,8 +716,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Another travis try 7" />
-    <MESSAGE value="Another travis try 8" />
     <MESSAGE value="Another travis try 9" />
     <MESSAGE value="Another travis try 10" />
     <MESSAGE value="Another travis try 11" />
@@ -731,7 +739,9 @@
     <MESSAGE value="Platform dependencies fixed 2" />
     <MESSAGE value="Platform dependencies fixed 3" />
     <MESSAGE value="Travis fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Travis fix" />
+    <MESSAGE value="Travis fix 2" />
+    <MESSAGE value="Travis fix 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Travis fix 3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/eosjs/dist/eosjs-jsonrpc.d.ts">
@@ -971,11 +981,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
