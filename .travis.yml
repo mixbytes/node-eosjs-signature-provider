@@ -1,21 +1,17 @@
+language: node_js
+os:
+  - linux
+  - osx
 dist: xenial
 node_js:
   - '12'
 
-os:
-  - linux
-  - osx
-
 jobs:
   include:
     - stage: test
-      os:
-        - linux
-        - osx
       script:
-        - npm i
         - cd platforms/$TRAVIS_OS_NAME
-        - npm i
+        - npm install
         - npm run build
       deploy:
         provider: npm
@@ -29,7 +25,6 @@ jobs:
       os:
         - linux
       script:
-        - npm i
         - npm run build
       deploy:
         provider: npm
