@@ -73,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+            <state relative-caret-position="108">
+              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -152,10 +152,10 @@
     <option name="directoryName" value="lIjmhEXu" />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="160" />
-    <option name="y" value="100" />
-    <option name="width" value="960" />
-    <option name="height" value="600" />
+    <option name="x" value="676" />
+    <option name="y" value="-1152" />
+    <option name="width" value="2048" />
+    <option name="height" value="1152" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -351,7 +351,7 @@
       <workItem from="1560157241626" duration="1272000" />
       <workItem from="1560182609455" duration="582000" />
       <workItem from="1560185966980" duration="1451000" />
-      <workItem from="1560200741888" duration="2385000" />
+      <workItem from="1560200741888" duration="2712000" />
     </task>
     <task id="LOCAL-00001" summary="Version 1.0.1, export updated">
       <created>1557921458855</created>
@@ -640,7 +640,21 @@
       <option name="project" value="LOCAL" />
       <updated>1560235908079</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Travis fix 7">
+      <created>1560236009954</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1560236009954</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Travis fix 8">
+      <created>1560236974469</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1560236974469</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -652,13 +666,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54532000" />
+    <option name="totallyTimeSpent" value="54859000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="676" y="-1152" width="2048" height="1152" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2152502" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13369511" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -670,8 +684,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49960285" weight="0.1589041" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4988086" visible="true" weight="0.36849314" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50119144" side_tool="true" visible="true" weight="0.36849314" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49925998" visible="true" weight="0.24861369" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50074" side_tool="true" visible="true" weight="0.24861369" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49960285" weight="0.32876712" />
@@ -726,8 +740,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Another travis try 12" />
-    <MESSAGE value="Another travis try 13" />
     <MESSAGE value="Another travis try 14" />
     <MESSAGE value="Another travis try 15" />
     <MESSAGE value="Another travis try 16" />
@@ -751,7 +763,9 @@
     <MESSAGE value="Travis fix 4" />
     <MESSAGE value="Travis fix 5" />
     <MESSAGE value="Travis fix 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Travis fix 6" />
+    <MESSAGE value="Travis fix 7" />
+    <MESSAGE value="Travis fix 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Travis fix 8" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/eosjs/dist/eosjs-jsonrpc.d.ts">
@@ -992,8 +1006,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+        <state relative-caret-position="108">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
         </state>
       </provider>
     </entry>

@@ -2,6 +2,10 @@ dist: xenial
 node_js:
   - '12'
 
+os:
+  - linux
+  - osx
+
 jobs:
   include:
     - stage: test
