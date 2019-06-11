@@ -20,9 +20,14 @@ script:
 before_deploy:
   - cd platforms/$TRAVIS_OS_NAME
 
+cache:
+  directories:
+    - ~/.cmake-js
+
 deploy:
   provider: npm
   email: govyazin@mixbytes.io
+  skip_cleanup: true
   on:
     branch: master
   api_key:
@@ -40,13 +45,9 @@ jobs:
       skip_cleanup: true
       script:
         - npm run build
-      deploy:
-        provider: npm
-        email: govyazin@mixbytes.io
-        on:
-          branch: master
-        api_key:
-          secure: $DEPLOY_KEY
+      before_deploy:
+        - echo "Deploying the project!"
+
 env:
   global:
     secure: rYMNasERxVJxR4qfB1RB4qbHnFErQb0mzAOBbc29Kce20CdTAmT62g75+4wsAoIgF+k62JoZC6sXiDCqw4E1jyyxYWqvx7tXMGIhEsfUI7NyRPIMDCMGNO1vixP0F6r21mu+tjY7U/6NhlfaXO/5UX4jcoQ7Z4mwWzIAnUm32zFBmMEqXMVpq+P77/OGzl7xUYRVTx5qUOdfVAwRSdaBYCR5HcBP2j/+pftqkx6RZa41uQ24OdVTsV33qf6V7gJBAjR+htqIzd2b6T/v4OW55QdnHI5iITjx9pqPDh8GpQdcsIFi3/AIh2hZf+M/zaZwLjI4qfv8HVWiii6p/D+p61TrNGHKDTPUU5/UD5MlM+pD7eE1frxMeRyF+xQj12bFs5w3q93gQoYgqdSGCuQenlB4pym1H1qXJ3nPf53qDq4s5X8H8gtEWpfCGN7hh9yfnHyM8GySlaqCo75wCdgtOUGux5GT8C/8U1nXzZQyy20ENNVtIApvnphxgpKgKTHB4Vn1QakZxa4DEreWnwMKukgU+8zgO/BUjSVbXXgacq9RRtMMmMzIFKmXjn+5mRXhFpYW/Yjx4kYka/rsUm1E+b7BJMT4vAESGeUvA9wjg/ELGvVFj0bqJxUdhN1JnT6elE8ZUL2BEyF1A7c+Zmih1Si9mcoONgMyDQEo3iCKVCI=

@@ -1,6 +1,6 @@
 {
   "name": "node-eosjs-signature-provider-linux",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Linux build for node-eosjs-signature-provider",
   "scripts": {
     "build": "cmake-js build -g -d ../../src/cpp -O build"
