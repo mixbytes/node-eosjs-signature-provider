@@ -1,6 +1,6 @@
 {
   "name": "node-eosjs-signature-provider-osx",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "MacOS build for node-eosjs-signature-provider",
   "scripts": {
     "build": "cmake-js build -g -d ../../src/cpp -O build"
@@ -10,6 +10,7 @@
   "files": [
     "build/Release/node_eos_signature_provider.node"
   ],
+  "main": "build/Release/node_eos_signature_provider.node",
   "devDependencies": {
     "cmake-js": "^5.2.0",
     "node-addon-api": "^1.6.3",

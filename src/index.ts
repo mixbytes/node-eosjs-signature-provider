@@ -16,10 +16,10 @@ export default class NodeEosjsSignatureProvider implements SignatureProvider {
         this.privateKeys = privateKeys;
         switch (process.platform) {
             case "linux":
-                this.module = require("node-eosjs-signature-provider-linux/build/Release/node-eosjs-signature-provider.node");
+                this.module = require("node-eosjs-signature-provider-linux");
                 break;
             case "darwin":
-                this.module = require("node-eosjs-signature-provider-osx/build/Release/node-eosjs-signature-provider.node");
+                this.module = require("node-eosjs-signature-provider-osx");
                 break;
             default:
                 throw new Error(`This module only works on Darwin (MacOS) and Linux. Your os is ${process.platform}`);
