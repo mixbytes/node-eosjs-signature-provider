@@ -1,0 +1,45 @@
+language: node_js
+os:
+  - linux
+  - osx
+
+dist: xenial
+
+node_js:
+  - '12'
+
+skip_cleanup: true
+
+script:
+  - cd platforms/$TRAVIS_OS_NAME
+  - npm install
+  - npm run build
+  - cd ../../
+
+before_deploy:
+  - cd platforms/$TRAVIS_OS_NAME
+
+deploy:
+  provider: npm
+  email: govyazin@mixbytes.io
+  on:
+    branch: master
+  api_key:
+    secure: $DEPLOY_KEY
+
+jobs:
+  include:
+    - stage: package
+      os:
+        - linux
+      skip_cleanup: true
+      script:
+        - npm run build
+      deploy:
+        provider: npm
+        email: govyazin@mixbytes.io
+        on:
+          branch: master
+        api_key:
+          secure: $DEPLOY_KEY
+
