@@ -2,7 +2,9 @@ language: node_js
 os:
   - linux
   - osx
+
 dist: xenial
+
 node_js:
   - '12'
 
@@ -10,17 +12,18 @@ script:
   - cd platforms/$TRAVIS_OS_NAME
   - npm install
   - npm run build
-  deploy:
-    provider: npm
-    email: govyazin@mixbytes.io
-    on:
-      branch: master
-    api_key:
-      secure: $DEPLOY_KEY
+
+deploy:
+  provider: npm
+  email: govyazin@mixbytes.io
+  on:
+    branch: master
+  api_key:
+    secure: $DEPLOY_KEY
 
 jobs:
   include:
-    - stage: buildDeploy
+    - stage: package
       os:
         - linux
       script:
