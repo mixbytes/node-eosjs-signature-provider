@@ -1,6 +1,6 @@
 {
   "name": "node-eosjs-signature-provider",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Nodejs signature provider for eosjs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -37,7 +37,7 @@
     "typescript": "^3.5.1"
   },
   "optionalDependencies": {
-    "node-eosjs-signature-provider-osx": "^1.0.0",
-    "node-eosjs-signature-provider-linux": "^1.0.0"
+    "node-eosjs-signature-provider-osx": "1.0.2",
+    "node-eosjs-signature-provider-linux": "1.0.2"
   }
 }
