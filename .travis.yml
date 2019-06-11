@@ -1,38 +1,35 @@
-os:
-  - linux
-  - osx
-dist: xenial
 language: node_js
+os:
+- linux
+- osx
+dist: xenial
 node_js:
-  - "12"
-stages:
-  - test
-  - buildDeploy
+- '12'
+
 jobs:
   include:
-    - stage: test
-      script:
-        - cd platforms/$TRAVIS_OS_NAME
-        - npm i
-        - npm run build
-      deploy:
-        provider: npm
-        email: govyazin@mixbytes.io
-        on:
-          branch:
-            master
-        api_key:
-          secure: gK329n9+MgdmFVuJA9OpKCqh846px5a+y+UI8nH9LMkue06wowKfscaXdVXnyv31gGbrmE/MmoF4GlLkuyAkhR+Y+9yl/gUDU7zXrNiiPFDg7KhFjc6pNZF6L+wHdqbJqSJl0xf9ikgL7AadpffcS88wWKX2NeccQVrTdrXZBlShvVQYEi89VoJwCxGNZxsdgviUqF0rKPokbQTliV6qd+FaL03HnKktQya4yrXpwPQOf/CiUj+qCoPl3ImyD3oYRfSmM/0/IlyEVDqZvolWXG2ofWw14lD9FjGBd4xewLQpx1VUsNrsmb8EALZxr9pU+S/6VAybT1c9iYHG67/HLzckoA2u1+B8W1C8op42/op0zM077oKTSSxuZHYyctiSwaTnTJT/2q2EoKTm1TosHnq1AKwS+XKjYJF5yD5Gi7B08BfHXO7LZF88ZhlJfya+FuUnSjlI4lwUY+12yTBl4wbky5ZXzZENSKHp8ytbuOX/G9pyHoPyHbmTZnDlZO3roZejzzDcKxJBLcNPqX0diLiGzdYi67X8yhJzPJ2cETEnf8uQYW4rva1et54hn17R1coJL9bd2aof0pEbqfKXqYxV5KDBZWi1W3xYGvbi4M+u5LIaChisO9/Jppz2O2ir5OHi+QdUk+eLjuSkfdAfO2xKeAsy7AYamuP3PzE5hC4=
+  - stage: test
+    script:
+    - cd platforms/$TRAVIS_OS_NAME
+    - npm i
+    - npm run build
+    deploy:
+      provider: npm
+      email: govyazin@mixbytes.io
+      on:
+        branch: master
+      api_key:
+        secure: $DEPLOY_KEY
 
-    - stage: buildDeploy
-      os:
-        - linux
-      script: npm run build
-      deploy:
-        provider: npm
-        email: govyazin@mixbytes.io
-        on:
-          branch:
-            master
-        api_key:
-          secure: gK329n9+MgdmFVuJA9OpKCqh846px5a+y+UI8nH9LMkue06wowKfscaXdVXnyv31gGbrmE/MmoF4GlLkuyAkhR+Y+9yl/gUDU7zXrNiiPFDg7KhFjc6pNZF6L+wHdqbJqSJl0xf9ikgL7AadpffcS88wWKX2NeccQVrTdrXZBlShvVQYEi89VoJwCxGNZxsdgviUqF0rKPokbQTliV6qd+FaL03HnKktQya4yrXpwPQOf/CiUj+qCoPl3ImyD3oYRfSmM/0/IlyEVDqZvolWXG2ofWw14lD9FjGBd4xewLQpx1VUsNrsmb8EALZxr9pU+S/6VAybT1c9iYHG67/HLzckoA2u1+B8W1C8op42/op0zM077oKTSSxuZHYyctiSwaTnTJT/2q2EoKTm1TosHnq1AKwS+XKjYJF5yD5Gi7B08BfHXO7LZF88ZhlJfya+FuUnSjlI4lwUY+12yTBl4wbky5ZXzZENSKHp8ytbuOX/G9pyHoPyHbmTZnDlZO3roZejzzDcKxJBLcNPqX0diLiGzdYi67X8yhJzPJ2cETEnf8uQYW4rva1et54hn17R1coJL9bd2aof0pEbqfKXqYxV5KDBZWi1W3xYGvbi4M+u5LIaChisO9/Jppz2O2ir5OHi+QdUk+eLjuSkfdAfO2xKeAsy7AYamuP3PzE5hC4=
+  - stage: buildDeploy
+    os:
+    - linux
+    script: npm run build
+    deploy:
+      provider: npm
+      email: govyazin@mixbytes.io
+      on:
+        branch: master
+      api_key:
+        secure: $DEPLOY_KEY
+
