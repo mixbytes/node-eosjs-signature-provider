@@ -1,35 +1,37 @@
-language: node_js
 os:
-- linux
-- osx
+  - linux
+  - osx
 dist: xenial
 node_js:
-- '12'
+  - '12'
 
 jobs:
   include:
-  - stage: test
-    script:
-    - cd platforms/$TRAVIS_OS_NAME
-    - npm i
-    - npm run build
-    deploy:
-      provider: npm
-      email: govyazin@mixbytes.io
-      on:
-        branch: master
-      api_key:
-        secure: $DEPLOY_KEY
+    - stage: test
+      script:
+        - npm i
+        - cd platforms/$TRAVIS_OS_NAME
+        - npm i
+        - npm run build
+      deploy:
+        provider: npm
+        email: govyazin@mixbytes.io
+        on:
+          branch: master
+        api_key:
+          secure: $DEPLOY_KEY
 
-  - stage: buildDeploy
-    os:
-    - linux
-    script: npm run build
-    deploy:
-      provider: npm
-      email: govyazin@mixbytes.io
-      on:
-        branch: master
-      api_key:
-        secure: $DEPLOY_KEY
+    - stage: buildDeploy
+      os:
+        - linux
+      script:
+        - npm i
+        - npm run build
+      deploy:
+        provider: npm
+        email: govyazin@mixbytes.io
+        on:
+          branch: master
+        api_key:
+          secure: $DEPLOY_KEY
 
