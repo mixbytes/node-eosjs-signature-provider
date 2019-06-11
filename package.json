@@ -37,7 +37,7 @@
     "typescript": "^3.5.1"
   },
   "optionalDependencies": {
-    "node-eosjs-signature-provider-macos": "^1.0.0",
+    "node-eosjs-signature-provider-osx": "^1.0.0",
     "node-eosjs-signature-provider-linux": "^1.0.0"
   }
 }

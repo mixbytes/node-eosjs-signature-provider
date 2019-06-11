@@ -1,13 +1,9 @@
 {
   "name": "node-eosjs-signature-provider-linux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Linux build for node-eosjs-signature-provider",
   "scripts": {
     "build": "cmake-js build -g -d ../../src/cpp -O build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mixbytes/node-eos-signature-provider-linux.git"
   },
   "author": "MixBytes",
   "license": "Apache-2.0",
